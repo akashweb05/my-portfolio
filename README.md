@@ -8,7 +8,7 @@ It features a multi-page architecture with dedicated sections for an introductio
 
 ## 🚀 Live Demo
 
-[**View Portfolio on Vercel**](https://shashank-raj-portfolio.vercel.app)
+[**View Portfolio on Netlify**](https://akashdeepsingh05.netlify.app)
 
 ---
 
@@ -35,7 +35,7 @@ It features a multi-page architecture with dedicated sections for an introductio
 -   **Animation:** [Framer Motion](https://www.framer.com/motion/)
 -   **Icons:** [Lucide React](https://lucide.dev/)
 -   **Routing:** [React Router](https://reactrouter.com/)
--   **Deployment:** [Vercel](https://vercel.com/)
+-   **Deployment:** [Netlify](https://netlify.com/)
 
 ---
 
