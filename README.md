@@ -55,7 +55,7 @@ Make sure you have Node.js and npm installed on your machine.
 
 1.  Clone the repo
     ```sh
-    git clone https://github.com/akashweb05/my-portfolio
+    git clone https://github.com/akashweb05/my-portfolio.git
     ```
 2.  Install NPM packages
     ```sh
