@@ -1,4 +1,4 @@
-# Personal Portfolio Website - Shashank Raj
+# Personal Portfolio Website - Akashdeep Singh
 
 A clean, modern, and highly performant personal portfolio website built with **React**, **Vite**, **Tailwind CSS**, and **Framer Motion**. This template is designed to be easily customizable and showcases a professional, animation-rich user interface.
 
@@ -55,7 +55,7 @@ Make sure you have Node.js and npm installed on your machine.
 
 1.  Clone the repo
     ```sh
-    git clone https://github.com/shashank2401/react-vite-tailwind-portfolio-template.git
+    git clone https://github.com/akashweb05/my-portfolio
     ```
 2.  Install NPM packages
     ```sh
@@ -98,4 +98,4 @@ src/
 
 ## ✒️ Author
 
-**Shashank Raj**
+**Akashdeep Singh**
