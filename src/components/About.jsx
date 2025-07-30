@@ -76,6 +76,12 @@ export default memo(function About() {
   );
 
   return (
+     <>
+      {/* Work in progress notice at the very top */}
+      <p style={{ color: "gray", fontStyle: "italic", textAlign: "center", marginBottom: "1rem" }}>
+        🚧 This portfolio is a work in progress. Updates coming soon!
+      </p>
+
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -125,7 +131,10 @@ export default memo(function About() {
 
           <div className="flex items-center justify-center md:justify-start gap-2 text-muted-foreground text-sm mb-2">
             <GraduationCap className="w-4 h-4" />
-            <span>Ram Sukh Das College, Ferozepur (Affiliated to Panjab University, Chandigarh)</span>
+            <span>
+              Ram Sukh Das College, Ferozepur (Affiliated to Panjab University,
+              Chandigarh)
+            </span>
           </div>
 
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl mb-4 text-center md:text-left">
@@ -145,6 +154,7 @@ export default memo(function About() {
 
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             {socialLinksElements}
+
             {/* <a
               href={RESUME_URL}
               target="_blank"
@@ -158,5 +168,6 @@ export default memo(function About() {
         </motion.div>
       </div>
     </motion.div>
+      </>
   );
 });
