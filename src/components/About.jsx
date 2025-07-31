@@ -76,86 +76,93 @@ export default memo(function About() {
   );
 
   return (
-     <>
+    <>
       {/* Work in progress notice at the very top */}
-      <p style={{ color: "gray", fontStyle: "italic", textAlign: "center", marginBottom: "1rem" }}>
+      <p
+        style={{
+          color: "gray",
+          fontStyle: "italic",
+          textAlign: "center",
+          marginBottom: "1rem",
+        }}
+      >
         🚧 This portfolio is a work in progress. Updates coming soon!
       </p>
 
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
-      className="w-full min-h-[80vh] flex items-center justify-center"
-    >
-      <div className="flex flex-col md:flex-row items-center justify-center gap-12 w-full max-w-5xl px-4 py-12">
-        {/* Profile Image */}
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="flex-shrink-0 w-40 h-40 sm:w-56 sm:h-56 rounded-full overflow-hidden border-4 border-white dark:border-neutral-900 shadow-md bg-neutral-200 dark:bg-neutral-800"
-          tabIndex={0}
-          aria-label="Profile photo of Akashdeep Singh"
-        >
-          <img
-            src={myPhotograph}
-            alt="Akashdeep Singh's profile"
-            loading="lazy"
-            decoding="async"
-            className="object-cover w-full h-full"
-            style={{ aspectRatio: "1/1" }}
-          />
-        </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        className="w-full min-h-[80vh] flex items-center justify-center"
+      >
+        <div className="flex flex-col md:flex-row items-center justify-center gap-12 w-full max-w-5xl px-4 py-12">
+          {/* Profile Image */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex-shrink-0 w-40 h-40 sm:w-56 sm:h-56 rounded-full overflow-hidden border-4 border-white dark:border-neutral-900 shadow-md bg-neutral-200 dark:bg-neutral-800"
+            tabIndex={0}
+            aria-label="Profile photo of Akashdeep Singh"
+          >
+            <img
+              src={myPhotograph}
+              alt="Akashdeep Singh's profile"
+              loading="lazy"
+              decoding="async"
+              className="object-cover w-full h-full"
+              style={{ aspectRatio: "1/1" }}
+            />
+          </motion.div>
 
-        {/* Content */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="flex-1 flex flex-col items-center md:items-start"
-        >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-200/50 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 mb-4">
-            <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-            <span className="text-sm font-semibold text-primary uppercase tracking-wide">
-              About Me
-            </span>
-          </div>
+          {/* Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex-1 flex flex-col items-center md:items-start"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-200/50 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 mb-4">
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+              <span className="text-sm font-semibold text-primary uppercase tracking-wide">
+                About Me
+              </span>
+            </div>
 
-          <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-3 text-foreground text-center md:text-left">
-            Hi, I'm{" "}
-            <span className="bg-gradient-to-r from-neutral-800 via-neutral-700 to-neutral-600 dark:from-white dark:via-neutral-300 dark:to-neutral-400 bg-clip-text text-transparent">
-              Akashdeep Singh
-            </span>
-          </h1>
+            <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-3 text-foreground text-center md:text-left">
+              Hi, I'm{" "}
+              <span className="text-black dark:text-white sm:bg-gradient-to-r sm:from-neutral-800 sm:via-neutral-700 sm:to-neutral-600 sm:dark:from-white sm:dark:via-neutral-300 sm:dark:to-neutral-400 sm:bg-clip-text sm:text-transparent">
+                Akashdeep Singh
+              </span>
+            </h1>
 
-          <div className="flex items-center justify-center md:justify-start gap-2 text-muted-foreground text-sm mb-2">
-            <GraduationCap className="w-4 h-4" />
-            <span>
-              Ram Sukh Das College, Ferozepur (Affiliated to Panjab University,
-              Chandigarh)
-            </span>
-          </div>
+            <div className="flex items-center justify-center md:justify-start gap-2 text-muted-foreground text-sm mb-2">
+              <GraduationCap className="w-4 h-4" />
+              <span>
+                Ram Sukh Das College, Ferozepur (Affiliated to Panjab
+                University, Chandigarh)
+              </span>
+            </div>
 
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl mb-4 text-center md:text-left">
-            I'm a passionate student with a strong interest in{" "}
-            <span className="text-foreground font-medium">
-              competitive programming
-            </span>{" "}
-            and tackling challenging problems. I love crafting efficient
-            solutions and exploring new technologies. My journey in tech
-            combines rigorous academic training with hands-on project
-            experience.
-          </p>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl mb-4 text-center md:text-left">
+              I'm a passionate student with a strong interest in{" "}
+              <span className="text-foreground font-medium">
+                competitive programming
+              </span>{" "}
+              and tackling challenging problems. I love crafting efficient
+              solutions and exploring new technologies. My journey in tech
+              combines rigorous academic training with hands-on project
+              experience.
+            </p>
 
-          <div className="flex flex-wrap gap-2 mb-4 justify-center md:justify-start">
-            {tagElements}
-          </div>
+            <div className="flex flex-wrap gap-2 mb-4 justify-center md:justify-start">
+              {tagElements}
+            </div>
 
-          <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-            {socialLinksElements}
+            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+              {socialLinksElements}
 
-            {/* <a
+              {/* <a
               href={RESUME_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -164,10 +171,10 @@ export default memo(function About() {
               <FileText className="w-4 h-4" />
               Resume
             </a> */}
-          </div>
-        </motion.div>
-      </div>
-    </motion.div>
-      </>
+            </div>
+          </motion.div>
+        </div>
+      </motion.div>
+    </>
   );
 });
