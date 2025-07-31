@@ -83,7 +83,7 @@ export default memo(function About() {
           color: "gray",
           fontStyle: "italic",
           textAlign: "center",
-          marginBottom: "1rem",
+          marginTop: "1rem",
         }}
       >
         🚧 This portfolio is a work in progress. Updates coming soon!
