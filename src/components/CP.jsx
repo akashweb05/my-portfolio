@@ -31,7 +31,6 @@ const itemVariants = {
   },
 };
 
-
 // --- Child Components (Unchanged) ---
 const PlatformCard = React.memo(({ platform }) => (
   <motion.div
@@ -51,7 +50,12 @@ const PlatformCard = React.memo(({ platform }) => (
     <div className="text-lg font-semibold text-foreground">{platform.name}</div>
     <div className="text-sm text-muted-foreground mt-1 mb-1">
       <span className="text-foreground/80">Handle:</span>{" "}
-      <a href={platform.profileUrl} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline dark:hover:text-primary-foreground/70 transition">
+      <a
+        href={platform.profileUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-primary hover:underline dark:hover:text-primary-foreground/70 transition"
+      >
         {platform.handle}
       </a>
     </div>
@@ -63,7 +67,12 @@ const PlatformCard = React.memo(({ platform }) => (
         </div>
       ))}
     </div>
-    <a href={platform.profileUrl} target="_blank" rel="noopener noreferrer" className="mt-auto pt-3 flex items-center gap-1 text-primary font-medium text-sm hover:underline dark:hover:text-primary-foreground/70 transition">
+    <a
+      href={platform.profileUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-auto pt-3 flex items-center gap-1 text-primary font-medium text-sm hover:underline dark:hover:text-primary-foreground/70 transition"
+    >
       <ExternalLink className="w-4 h-4" />
       View Profile
     </a>
@@ -74,7 +83,12 @@ PlatformCard.displayName = "PlatformCard";
 const HighlightItem = React.memo(({ item }) => (
   <motion.li variants={itemVariants}>
     {item.text}
-    <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline dark:hover:text-primary-foreground/70 font-medium transition">
+    <a
+      href={item.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-primary hover:underline dark:hover:text-primary-foreground/70 font-medium transition"
+    >
       {item.linkText}
     </a>
     {item.rest}
@@ -82,24 +96,43 @@ const HighlightItem = React.memo(({ item }) => (
 ));
 HighlightItem.displayName = "HighlightItem";
 
-
 // --- Main Component ---
 function CompetitiveProgrammingComponent() {
-  const cpPlatforms = useMemo(() => [
-    { name: "Codeforces", logo: "/assets/logos/codeforces.png", handle: "", profileUrl: "", stats: [{ label: "Max Rating", value: "" }, { label: "Rank", value: "" }] },
-    { name: "CodeChef", logo: "/assets/logos/codechef.svg", handle: "", profileUrl: "", stats: [{ label: "Max Rating", value: "" }, { label: "Rank", value: "" }] },
-    { name: "LeetCode", logo: "/assets/logos/leetcode.png", handle: "Akashdeep-Singh", profileUrl: "https://leetcode.com/u/Akashdeep-Singh/", stats: [{ label: "Max Rating", value: "" }, { label: "Badge", value: "" }] },
-    { name: "AtCoder", logo: "/assets/logos/atcoder.png", handle: "", profileUrl: "", stats: [{ label: "Max Rating", value: "" }, { label: "Rank", value: "" }] },
-  ], []);
-
-  const highlights = useMemo(() => [
-    { text: "Solved over ", linkText: "900+ problems", href: "https://codolio.com/profile/shashank24", rest: " across multiple CP platforms, enhancing algorithmic thinking and coding efficiency." },
-    { text: "Participated in more than ", linkText: "100 contests", href: "https://codolio.com/profile/shashank24", rest: ", consistently testing and improving my problem-solving skills." },
-    { text: "Ranked among the top with a ", linkText: "Global Rank of 755", href: "https://codeforces.com/contest/2114/standings/participant/211255102#p211255102", rest: " in Codeforces Round 1027 (Div. 3)." },
-    { text: "Achieved a notable ", linkText: "Global Rank of 849", href: "https://codeforces.com/contest/2090/standings/participant/206688395#p206688395", rest: " in Codeforces Round 1012 (Div. 2)." },
-    { text: "Earned a ", linkText: "Top 100 finish (Rank 99)", href: "https://www.codechef.com/rankings/START154D?itemsPerPage=100&order=asc&page=1&sortBy=rank", rest: " in CodeChef Starters 154 (Div. 4)." },
-    { text: "Demonstrated strong performance with a ", linkText: "Global Rank of 120", href: "https://www.codechef.com/rankings/START187B?itemsPerPage=100&order=asc&page=1&sortBy=rank", rest: " in CodeChef Starters 187 (Div. 2)." },
-  ], []);
+  const cpPlatforms = useMemo(
+    () => [
+      {
+        name: "Codeforces",
+        logo: "/assets/logos/codeforces.png",
+        handle: "akashweb05",
+        profileUrl: "https://codeforces.com/profile/akashweb05",
+        stats: [
+          { label: "Max Rating", value: "-" },
+          { label: "Rank", value: "-" },
+        ],
+      },
+      {
+        name: "LeetCode",
+        logo: "/assets/logos/leetcode.png",
+        handle: "Akashdeep-Singh",
+        profileUrl: "https://leetcode.com/u/Akashdeep-Singh/",
+        stats: [
+          { label: "Problems Solved", value: "80+" },
+          { label: "Badge", value: "50 Days Badge 2025" },
+        ],
+      },
+      {
+        name: "GeeksforGeeks",
+        logo: "/assets/logos/GeeksForGeeks_logo.png",
+        handle: "akashwmvfm",
+        profileUrl: "https://www.geeksforgeeks.org/user/akashwmvfm/",
+        stats: [
+          { label: "Problems Solved", value: "30+" },
+          { label: "Coding Score", value: "90" },
+        ],
+      },
+    ],
+    []
+  );
 
   return (
     <div className="w-full min-h-[80vh] flex flex-col items-center justify-center px-4 py-12">
@@ -109,7 +142,10 @@ function CompetitiveProgrammingComponent() {
         animate="visible"
         className="flex flex-col items-center w-full space-y-16"
       >
-        <motion.div variants={itemVariants} className="flex flex-col items-center text-center max-w-2xl">
+        <motion.div
+          variants={itemVariants}
+          className="flex flex-col items-center text-center max-w-2xl"
+        >
           {/* --- THIS IS THE FIXED HEADING --- */}
           <h2 className="text-4xl sm:text-5xl font-bold mb-4 tracking-tight flex flex-col sm:flex-row items-center sm:items-baseline justify-center gap-2 sm:gap-4 text-foreground text-center">
             <Swords className="w-8 h-8 text-primary drop-shadow-sm flex-shrink-0" />
@@ -117,42 +153,21 @@ function CompetitiveProgrammingComponent() {
           </h2>
           <p className="text-lg text-muted-foreground">
             My competitive programming journey has been filled with challenging
-            problems, thrilling contests, and constant learning. Here you’ll find my
-            profiles, stats, and some highlights from major platforms.
+            problems, thrilling contests, and constant learning. Here you’ll
+            find my profiles, stats, and some highlights from major platforms.
           </p>
         </motion.div>
 
         <motion.div variants={itemVariants} className="w-full max-w-5xl">
-          <motion.div
+          <motion.div 
             variants={listContainerVariants}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {cpPlatforms.map((platform) => (
               <PlatformCard key={platform.name} platform={platform} />
             ))}
           </motion.div>
         </motion.div>
-
-        {/* <motion.div variants={itemVariants} className="w-full max-w-3xl">
-          <div className="bg-white/90 dark:bg-neutral-900/80 border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow p-6">
-            <h3 className="text-xl font-semibold text-foreground mb-4">
-              Key Highlights
-            </h3>
-            <p className="text-base text-muted-foreground mb-4">
-              <a href="https://codolio.com/profile/shashank24" className="text-primary hover:underline dark:hover:text-primary-foreground/70 transition font-medium" target="_blank" rel="noopener noreferrer">
-                View my Codolio Profile for more details
-              </a>
-            </p>
-            <motion.ul
-              variants={listContainerVariants}
-              className="list-disc ml-5 space-y-2 text-base text-muted-foreground"
-            >
-              {highlights.map((item, index) => (
-                <HighlightItem key={index} item={item} />
-              ))}
-            </motion.ul>
-          </div>
-        </motion.div> */}
       </motion.div>
     </div>
   );

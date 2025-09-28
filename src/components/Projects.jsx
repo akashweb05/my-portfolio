@@ -27,7 +27,6 @@ const itemVariants = {
   },
 };
 
-
 // --- Child Component (No changes needed) ---
 const ProjectCard = memo(({ project }) => {
   return (
@@ -75,17 +74,74 @@ const ProjectCard = memo(({ project }) => {
 });
 ProjectCard.displayName = "ProjectCard";
 
-
 // --- Main Projects Component ---
 function ProjectsComponent() {
   const projectsData = useMemo(
     () => [
-      { title: "Text File Compressor", desc: "Built a robust, lossless text file compressor in C++ using the LZW algorithm, applying OOP and advanced algorithms. Achieved ~44% file size reduction on real-world files with efficient compression and decompression.", tags: ["C++", "LZW Algorithm", "OOPS"], links: [{ type: "code", href: "https://github.com//file-compressor-in-cpp" }] },
-      { title: "Pathfinding Visualizer", desc: "Interactive C++/SFML visualizer for Dijkstra's and A* algorithms. Features dynamic obstacles, diagonal movement, OOP, and optimized data structures for smooth, real-time animations.", tags: ["C++", "SFML", "Dijkstra's", "A*", "OOPS", "Data Structures"], links: [{ type: "code", href: "https://github.com//pathfinding-visualizer-in-cpp" }] },
-      { title: "Codeforces Visualizer", desc: "A minimal web app to view and compare Codeforces profiles. Shows key stats, rating history, and performance trends with clean visualizations. Built for fast, distraction-free, side-by-side comparisons.", tags: ["React", "Vite", "JavaScript", "Tailwind CSS", "Codeforces API"], links: [{ type: "demo", href: "https://cf-visualizer-rho.vercel.app" }, { type: "code", href: "https://github.com//cf-visualizer" }] },
-      { title: "GitHub Profile Visualizer", desc: "A dynamic app for exploring and comparing GitHub user profiles. Visualizes rich statistics, activity timelines, and repository insights, including a contribution heatmap. Supports side-by-side comparisons and offers both dark and light modes.", tags: ["React", "Vite", "JavaScript", "Tailwind CSS", "GitHub API"], links: [{ type: "demo", href: "https://github-profile-visualizer-six.vercel.app/" }, { type: "code", href: "https://github.com//github-profile-visualizer" }] },
-      { title: "Weather App", desc: "A sleek, responsive weather application delivering real-time weather updates for any city. Features location-based forecasts, intuitive search suggestions, and seamless toggling between Celsius and Fahrenheit.", tags: ["HTML", "CSS", "JavaScript", "Weather API", "Responsive Design"], links: [{ type: "demo", href: "https://weather-app-zeta--62.vercel.app/" }, { type: "code", href: "https://github.com//weather-app" }] },
-      { title: "Soil-Water Characteristic Curve Prediction", desc: "Used Artificial Neural Networks (ANNs) to predict SWCC parameters from soil properties for plastic soils. Improved geotechnical prediction for slope stability and foundation design.", tags: ["Python", "TensorFlow", "ANN", "Soil Mechanics", "Data Analysis"], links: [{ type: "code", href: "https://github.com//swcc-prediction-using-ann" }] },
+      {
+        title: "AgriTech – Real-Time Farm Insights",
+        desc: "Built a scalable Admin Panel and dashboard for multi-sector farm management, providing real-time insights to users. Enabled streamlined management of multiple agricultural sectors, improved data accessibility, and created a centralized platform for farm and crop tracking.",
+        tags: [
+          "React",
+          "Javascript",
+          "Tailwind CSS",
+          "C#",
+          ".NET Core Web API",
+          "SQL Server",
+        ],
+        links: [
+          { type: "code", href: "https://github.com/akashweb05/AgriTech" },
+        ],
+      },
+      {
+        title: "GrandConnect – Social Platform for Seniors",
+        desc: "Developed a social platform with real-time video conferencing and chat features tailored for seniors, integrating Jitsi and .NET Core API. Designed an accessibility-focused UI for ease of use and senior-friendly interaction.",
+        tags: [
+          "React",
+          "Javascript",
+          "Bootstrap",
+          "Jitsi",
+          "C#",
+          ".NET Core Web API",
+          "SQL Server",
+        ],
+        links: [
+          {
+            type: "code",
+            href: "https://github.com/akashweb05/GrandConnect",
+          },
+          { type: "demo", href: "https://youtu.be/mDTY8aejRf4" },
+        ],
+      },
+      {
+        title: "FraudShield AI - Fraud Detection System",
+        desc: "AI-powered fraud detection system using vector embeddings, rule-based checks, and anomaly detection on TiDB Cloud. Provides real-time risk scoring and an interactive frontend for querying transactions.",
+        tags: [
+          "Python",
+          "FastAPI",
+          "sentence-transformers",
+          "TiDB Cloud",
+          "React",
+        ],
+        links: [
+          {
+            type: "code",
+            href: "https://github.com/akashweb05/FraudShield-AI",
+          },
+          { type: "demo", href: "https://youtu.be/hb5ITORiHQo" },
+        ],
+      },
+      {
+        title: "BookNest - Books Management System",
+        desc: "A full-stack app to manage books, with a React frontend and ASP.NET Core backend. Supports CRUD operations along with search and pagination for efficient library management.",
+        tags: ["React", "C#", "ASP.NET Core Web API", "SQL Server"],
+        links: [
+          {
+            type: "code",
+            href: "https://github.com/akashweb05/booksmanagement",
+          },
+        ],
+      },
     ],
     []
   );
@@ -101,26 +157,32 @@ function ProjectsComponent() {
         className="flex flex-col items-center w-full"
       >
         {/* Item 1: The header text block */}
-        <motion.div variants={itemVariants} className="flex flex-col items-center text-center">
-            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4 flex items-center gap-4 text-foreground">
-                <FolderKanban className="w-8 h-8 sm:w-11 sm:h-11 text-primary drop-shadow-sm" />
-                Projects
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-center mb-10">
-                Here are some of the projects I've worked on, ranging from algorithm visualizers and utilities to frontend tools and machine learning models. Each project reflects my passion for clean design, efficient problem-solving, and practical implementation.
-            </p>
+        <motion.div
+          variants={itemVariants}
+          className="flex flex-col items-center text-center"
+        >
+          <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4 flex items-center gap-4 text-foreground">
+            <FolderKanban className="w-8 h-8 sm:w-11 sm:h-11 text-primary drop-shadow-sm" />
+            Projects
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-center mb-10">
+            Here are some of the projects I've worked on, ranging from algorithm
+            visualizers and utilities to frontend tools and machine learning
+            models. Each project reflects my passion for clean design, efficient
+            problem-solving, and practical implementation.
+          </p>
         </motion.div>
 
         {/* Item 2: The entire project card grid animates in as one block... */}
-        {/* <motion.div
+        <motion.div
           // It is ALSO a container for its own children (the cards)
           variants={containerVariants}
-          className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
         >
           {projectsData.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
-        </motion.div> */}
+        </motion.div>
       </motion.div>
     </div>
   );

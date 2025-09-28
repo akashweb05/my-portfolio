@@ -53,7 +53,7 @@ const TAGS = [
 ];
 
 const RESUME_URL =
-  "https://drive.google.com/file/d/1FIq3CNO73-M9GXjIhZAYo49gQGxg/view?usp=sharin";
+  "https://drive.google.com/file/d/1hD7Y5CckrKTjrcroun2FiNGECAjnOu4c/view?usp=drive_link";
 
 export default memo(function About() {
   const socialLinksElements = useMemo(
@@ -76,19 +76,6 @@ export default memo(function About() {
   );
 
   return (
-    <>
-      {/* Work in progress notice at the very top */}
-      <p
-        style={{
-          color: "gray",
-          fontStyle: "italic",
-          textAlign: "center",
-          marginTop: "1rem",
-        }}
-      >
-        🚧 This portfolio is a work in progress. Updates coming soon!
-      </p>
-
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -162,7 +149,7 @@ export default memo(function About() {
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
               {socialLinksElements}
 
-              {/* <a
+              <a
               href={RESUME_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -170,11 +157,10 @@ export default memo(function About() {
             >
               <FileText className="w-4 h-4" />
               Resume
-            </a> */}
+            </a>
             </div>
           </motion.div>
         </div>
       </motion.div>
-    </>
   );
 });
